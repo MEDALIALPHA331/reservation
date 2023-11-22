@@ -8,6 +8,7 @@ import (
 )
 
 const (
+	//! should not be above
 	bcryptCost = 5
 )
 

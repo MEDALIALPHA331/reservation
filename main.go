@@ -39,7 +39,9 @@ func main() {
 
 	apiv1 := e.Group("/apiv1")
 	apiv1.GET("/", server.HelloHandler)
-	apiv1.POST("/user", handler.CreateUserHandler)
+	apiv1.GET("/users", handler.GetAllUsersHandler)
+	apiv1.GET("/users/:id", handler.GetUserByIdHandler)
+	apiv1.POST("/users", handler.CreateUserHandler)
 
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%+v", PORT)))
 }

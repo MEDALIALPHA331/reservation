@@ -8,30 +8,61 @@ enviroments
 docker
 pulumi
 
-## enviroment variables:
+## enviroment variables
 
-- go get github.com/joho/godotenv
-- or -> `import _ "github.com/joho/godotenv/autoload"`
+- First install godotenv package
 
-## echo http framework:
+  ```bash
+  go get github.com/joho/godotenv
+  ```
 
-- go get github.com/labstack/echo/v4
-- github.com/labstack/echo/v4/middleware
+- auto import env variables from .env in main.go using:
 
-## mongodb docker image:
+  ```go
+  import _ "github.com/joho/godotenv/autoload"
+  ```
+
+## Install Echo http framework
+
+- ```bash
+    go get github.com/labstack/echo/v4
+    go get github.com/labstack/echo/v4/middleware
+  ```
+
+## Mongodb docker image
 
 - https://hub.docker.com/_/mongo
-- `docker run -p 27017:27017 mongo:latest`
+- open docker and run this command to start mongodb:
 
-## mongodb compass tool:
+  ```bash
+  docker run -p 27017:27017 mongo:latest
+  ```
 
-## https://www.mongodb.com/try/download/compass
+## Mongodb compass tool
 
-## mongodb go driver docs:
+- [Download Compass from here](https://www.mongodb.com/try/download/compass)
 
-https://www.mongodb.com/docs/drivers/go/
+## mongodb go driver docs
+
+- [visit this link for the mongodb go driver docs](https://www.mongodb.com/docs/drivers/go/)
 
 ## mongodb go driver package:
 
-https://pkg.go.dev/go.mongodb.org/mongo-driver/mongo
+- [Visit this link to download the driver](https://pkg.go.dev/go.mongodb.org/mongo-driver/mongo)
+
+```bash
 go get go.mongodb.org/mongo-driver/mongo
+```
+
+- Install [bcrypt](https://pkg.go.dev/golang.org/x/crypto/bcrypt#GenerateFromPassword):
+
+  ```bash
+    go get golang.org/x/crypto/bcrypt
+  ```
+
+- To query api using curl e.g
+
+```bash
+    curl -v -X POST -H "Content-Type: application/json" -d '{"FirstName": "salah", "LastName": "khaled", "Email": "salah@gmail.com", "Password": "dali12346789"}' http://127.0.0.1:8080/apiv1/user
+
+```

@@ -1,9 +1,5 @@
 # TODOs
 
-install echo
-init server
-enviroments
-
 models
 extract handler
 init mongo, connect

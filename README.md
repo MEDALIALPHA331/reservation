@@ -1,12 +1,14 @@
 # TODOs
 
-extract handler
-init mongo, connect
-extract mongo, interface db
-global handler
-enviroments
-docker
-pulumi
+- sqlx, sqlite & turso db
+- auth
+- testing & coverage
+- other CRUD
+- config
+- docker
+- gh actions, ci/cd
+- pulumi, iac -lambda
+- frontend: templates, go temp, htmx + Vite
 
 ## enviroment variables
 

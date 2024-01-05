@@ -42,6 +42,8 @@ func main() {
 	apiv1.GET("/users", handler.GetAllUsersHandler)
 	apiv1.GET("/users/:id", handler.GetUserByIdHandler)
 	apiv1.POST("/users", handler.CreateUserHandler)
+	apiv1.PUT("/users/:id", handler.UpdateUserHandler)
+	apiv1.DELETE("/users/:id", handler.DeleteUserHandler)
 
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%+v", PORT)))
 }

@@ -43,3 +43,8 @@ func CreateUserFromDTO(user *UserDTO) *User {
 		EncryptedPassword: string(encpw),
 	}
 }
+
+type UpdateUserDTO struct {
+	FirstName string `json:"firstName"`
+	LastName string `json:"lastName"`
+}
